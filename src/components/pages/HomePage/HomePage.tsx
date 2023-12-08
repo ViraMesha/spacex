@@ -1,5 +1,11 @@
+import HomeLayout from "../../templates/HomeLayout/HomeLayout";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <HomeLayout />
+    </>
+  );
 };
 
 export default HomePage;

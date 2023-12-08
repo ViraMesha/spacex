@@ -2,7 +2,7 @@
 
 :root {
   /* Fonts */
-  --main-font-family: "Lato", sans-serif;
+  --main-font-family: "Syne", sans-serif;
   --secondary-font-family: "Lato", sans-serif;
 
   /* Text colors */
@@ -16,8 +16,12 @@
   --bg-black-opacity: rgba(30, 30, 30, 0.48);
   --bg-gray: #ececec;
   --bg-light-blue: #d3eaff;
+  --bg-light-blue-hover: #a0c8ed;
   --bg-white: #fff;
   --bg-pink: #dd377d;
+
+  /* Transition */
+  --transition: 0.3s ease-in-out;
 }
 
 *,
@@ -39,12 +43,12 @@ body {
   font-family: var(--main-font-family);
   line-height: 1.5;
   font-weight: 300;
+  color: var(--text-white);
 }
 
 img,
 picture,
-video,
-svg {
+video {
   display: block;
   max-width: 100%;
   height: auto;

@@ -1,5 +1,11 @@
+import Header from "../../organisms/Header/Header";
+
 const HomeLayout = () => {
-  return <div>HomeLayout</div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default HomeLayout;
