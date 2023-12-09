@@ -1,7 +1,7 @@
 import styled from "styled-components";
-
+import arrow from "../../../assets/icons/arrow-down.svg";
 export const Section = styled.section`
-  height: 740px;
+  height: 100vh;
   position: relative;
   padding-top: 239px;
 `;
@@ -12,17 +12,42 @@ export const Body = styled.div`
   max-width: 1440px;
 `;
 
-export const Heading = styled.h1`
+export const Content = styled.div`
   text-align: center;
-  font-size: 48px;
-  font-weight: 800;
-  line-height: normal;
-  text-transform: uppercase;
   position: relative;
   z-index: 1;
+`;
+
+export const Heading = styled.h1`
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
 
   & > span {
     font-size: 310px;
+    display: inline-block;
+    margin-top: -50px;
+  }
+`;
+
+export const Link = styled.a`
+  text-shadow: var(--text-shadow);
+  font-family: Lato;
+  font-size: 32px;
+  line-height: normal;
+  display: inline-block;
+  margin-top: 58px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: -40px;
+    width: 23px;
+    height: 27px;
+    background: url(${arrow}) no-repeat;
   }
 `;
 
@@ -35,14 +60,14 @@ export const SliderWrapper = styled.div`
 
   & .slick-dots {
     z-index: 3;
-    top: 65%;
-    left: 46%;
+    top: 58%;
+    left: 47%;
     transform: translate(-50%, -50%);
   }
 `;
 
 export const Image = styled.img`
-  height: 740px;
+  height: 100vh;
   width: 100%;
   object-fit: cover;
   opacity: 0.48;

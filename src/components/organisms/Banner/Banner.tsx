@@ -1,4 +1,12 @@
-import { Section, Body, Heading, SliderWrapper, Image } from "./Banner.styled";
+import {
+  Section,
+  Body,
+  Content,
+  Heading,
+  SliderWrapper,
+  Image,
+  Link,
+} from "./Banner.styled";
 import img1 from "../../../assets/banner-1.jpg";
 import img2 from "../../../assets/banner-2.jpg";
 import img3 from "../../../assets/banner-3.jpg";
@@ -10,14 +18,17 @@ const Banner = () => {
   return (
     <Section>
       <Body>
-        <Heading>
-          The space is waiting for <span>you</span>
-        </Heading>
+        <Content>
+          <Heading>
+            The space is waiting for <span>you</span>
+          </Heading>
+          <Link href="#tours">Explore tours</Link>
+        </Content>
         <SliderWrapper>
           <Slider dots>
             {bannerImages.map((img, i) => (
               <div key={i}>
-                <Image src={img} alt="" />
+                <Image src={img} alt="Hero Background" />
               </div>
             ))}
           </Slider>
