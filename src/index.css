@@ -44,6 +44,8 @@ body {
   line-height: 1.5;
   font-weight: 300;
   color: var(--text-white);
+  overflow-x: hidden;
+  background-color: var(--text-black);
 }
 
 img,

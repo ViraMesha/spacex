@@ -1,7 +1,9 @@
 // Import necessary modules and components
 import { forwardRef } from "react";
 import SlickSlider, { Settings } from "react-slick";
+import { StyledSlider } from "./Slider.styled";
 
+// Define prop type for ReusableSlider component
 type SliderProps = {
   slidesToShow?: number;
   children?: React.ReactNode;
@@ -11,7 +13,6 @@ type SliderProps = {
   slidesToScroll?: number;
   draggable?: boolean;
   swipe?: boolean;
-  dotsStyles?: string;
   speed?: number;
   beforeChange?: (prev: number, next: number) => void;
   afterChange?: (index: number) => void;
@@ -20,10 +21,13 @@ type SliderProps = {
   swipeToSlide?: boolean;
   autoplay?: boolean;
   autoplaySpeed?: number;
+  dotsColor?: "white" | "black";
 };
 
+// Define type for forwarded reference
 type ForwardedRefType = SlickSlider | null;
 
+// Create the ReusableSlider component
 const Slider = forwardRef<ForwardedRefType, SliderProps>(
   (
     {
@@ -35,7 +39,6 @@ const Slider = forwardRef<ForwardedRefType, SliderProps>(
       slidesToScroll = 1,
       draggable = true,
       swipe = true,
-      dotsStyles,
       speed = 900,
       beforeChange,
       vertical = false,
@@ -44,9 +47,11 @@ const Slider = forwardRef<ForwardedRefType, SliderProps>(
       swipeToSlide,
       autoplay = false,
       autoplaySpeed = 2000,
+      dotsColor = "white",
     },
     ref
   ) => {
+    // Configure the settings for the Slider component
     const sliderSettings: Settings = {
       slidesToShow,
       slidesToScroll,
@@ -61,13 +66,13 @@ const Slider = forwardRef<ForwardedRefType, SliderProps>(
       autoplay,
       autoplaySpeed,
       appendDots: (dots: React.ReactNode) => <ul>{dots}</ul>,
-      dotsClass: `${dotsStyles || ""}`,
+      dotsClass: `slick-dots ${dotsColor}`,
       customPaging: (i) => (
         <button type="button" aria-label={`Go to slide ${i + 1}`}></button>
       ),
     };
     return (
-      <Slider
+      <StyledSlider
         {...sliderSettings}
         speed={speed}
         ref={ref}
@@ -75,11 +80,12 @@ const Slider = forwardRef<ForwardedRefType, SliderProps>(
         afterChange={afterChange}
       >
         {children}
-      </Slider>
+      </StyledSlider>
     );
   }
 );
 
+// Set display name for ReusableSlider component
 Slider.displayName = "Slider";
 
 export default Slider;
