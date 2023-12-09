@@ -33,9 +33,12 @@ export const Heading = styled.h1`
 `;
 
 export const Link = styled.a`
+  -webkit-text-stroke: 0.4px var(--text-black);
+  -webkit-text-fill-color: var(--text-white);
   text-shadow: var(--text-shadow);
   font-family: Lato;
   font-size: 32px;
+  font-weight: 300;
   line-height: normal;
   display: inline-block;
   padding-right: 20px;
