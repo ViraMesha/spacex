@@ -7,6 +7,7 @@ export const Section = styled.section`
 export const Heading = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 43px;
 `;
 
 export const Title = styled.h2`
@@ -16,4 +17,18 @@ export const Title = styled.h2`
   font-weight: 800;
   line-height: normal;
   text-transform: uppercase;
+`;
+
+export const Grid = styled.div`
+  & .slick-dots {
+    bottom: -60px;
+  }
+
+  & .slick-dots > li {
+    border-color: var(--text-light-black);
+  }
+
+  & .slick-dots li.slick-active button:before {
+    color: var(--text-light-black);
+  }
 `;

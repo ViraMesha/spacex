@@ -1,13 +1,13 @@
 import icons from "../../../../assets/sprite.svg";
 import { Button, Link } from "./IconButton.styled";
 
-type IconButton = {
+interface IconButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLink?: boolean;
   href?: string;
   icon: string;
-};
+}
 
-const IconButton = ({ isLink, href = "#", icon }: IconButton) => {
+const IconButton = ({ isLink, href = "#", icon, ...rest }: IconButton) => {
   return (
     <>
       {isLink ? (
@@ -17,7 +17,7 @@ const IconButton = ({ isLink, href = "#", icon }: IconButton) => {
           </svg>
         </Link>
       ) : (
-        <Button>
+        <Button {...rest}>
           <svg width={24} height={24}>
             <use href={icons + `#${icon}`} />
           </svg>

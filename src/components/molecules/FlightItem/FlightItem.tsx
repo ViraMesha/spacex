@@ -1,5 +1,32 @@
-const CarouselItem = () => {
-  return <div>CarouselItem</div>;
+import { TFlight } from "../../../types";
+import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
+import IconButton from "../../atoms/Buttons/IconButton/IconButton";
+
+import {
+  Item,
+  Image,
+  Title,
+  Text,
+  Content,
+  ButtonsWrapper,
+} from "./FlightItem.styled";
+
+const FlightItem = ({ name, description, img }: TFlight) => {
+  return (
+    <Item>
+      <article>
+        <Image src={img} alt={name} width={411} height={296} />
+        <Content>
+          <Title>{name}</Title>
+          <Text>{description}</Text>
+          <ButtonsWrapper>
+            <ActionButton>buy</ActionButton>
+            <IconButton icon="heart" />
+          </ButtonsWrapper>
+        </Content>
+      </article>
+    </Item>
+  );
 };
 
-export default CarouselItem;
+export default FlightItem;

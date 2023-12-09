@@ -25,7 +25,7 @@ const Banner = () => {
           <Link href="#tours">Explore tours</Link>
         </Content>
         <SliderWrapper>
-          <Slider dots>
+          <Slider dots autoplay infinite>
             {bannerImages.map((img, i) => (
               <div key={i}>
                 <Image src={img} alt="Hero Background" />

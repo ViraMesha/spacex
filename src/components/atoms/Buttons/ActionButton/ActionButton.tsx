@@ -1,12 +1,18 @@
 import { Button } from "./ActionButton.styled";
 
-type ActionButtonProps = {
+interface ActionButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLink?: boolean;
   children: React.ReactNode;
   href?: string;
-};
+}
 
-const ActionButton = ({ isLink, children, href = "#" }: ActionButtonProps) => {
+const ActionButton = ({
+  isLink,
+  children,
+  href = "#",
+  ...rest
+}: ActionButtonProps) => {
   return (
     <>
       {isLink ? (
@@ -14,7 +20,7 @@ const ActionButton = ({ isLink, children, href = "#" }: ActionButtonProps) => {
           {children}
         </Button>
       ) : (
-        <Button>{children}</Button>
+        <Button {...rest}>{children}</Button>
       )}
     </>
   );
