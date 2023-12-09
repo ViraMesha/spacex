@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Item = styled.li`
+export const Item = styled.div`
   text-align: center;
   font-size: 24px;
   line-height: normal;
