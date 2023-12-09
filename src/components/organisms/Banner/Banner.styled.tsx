@@ -2,7 +2,7 @@ import styled from "styled-components";
 import arrow from "../../../assets/icons/arrow-down.svg";
 
 export const Section = styled.section`
-  height: 740px;
+  min-height: 740px;
   position: relative;
   padding-top: 239px;
   background-color: var(--bg-black);

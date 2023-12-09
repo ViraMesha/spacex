@@ -1,5 +1,11 @@
+import FavoritesLayout from "../../templates/FavoritesLayout/FavoritesLayout";
+
 const FavoritesPage = () => {
-  return <div>FavoritesPage</div>;
+  return (
+    <>
+      <FavoritesLayout />
+    </>
+  );
 };
 
 export default FavoritesPage;
