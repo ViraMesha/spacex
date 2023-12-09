@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import arrow from "../../../assets/icons/arrow-down.svg";
+
 export const Section = styled.section`
-  height: 100vh;
+  height: 740px;
   position: relative;
   padding-top: 239px;
+  background-color: var(--bg-black);
 `;
 
 export const Body = styled.div`
@@ -36,7 +38,8 @@ export const Link = styled.a`
   font-size: 32px;
   line-height: normal;
   display: inline-block;
-  margin-top: 58px;
+  padding-right: 20px;
+  margin-top: 50px;
   position: relative;
 
   &::before {
@@ -44,7 +47,7 @@ export const Link = styled.a`
     display: inline-block;
     position: absolute;
     top: 7px;
-    right: -40px;
+    right: -23px;
     width: 23px;
     height: 27px;
     background: url(${arrow}) no-repeat;
@@ -67,7 +70,7 @@ export const SliderWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 100vh;
+  height: 740px;
   width: 100%;
   object-fit: cover;
   opacity: 0.48;

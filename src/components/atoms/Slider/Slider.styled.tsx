@@ -7,6 +7,7 @@ export const StyledSlider = styled(SlickSlider)`
     justify-content: center;
     align-items: center;
     gap: 8px;
+    height: 24px;
   }
 
   & .slick-dots > li {

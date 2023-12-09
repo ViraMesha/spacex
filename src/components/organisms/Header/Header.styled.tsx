@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Wrapper } from "../../atoms/Container/Container.styled";
 
 export const StyledHeader = styled.header`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,13 +9,12 @@ export const StyledHeader = styled.header`
   padding: 0.87rem;
   background-color: var(--bg-black-opacity);
   z-index: 10;
-`;
 
-export const Container = styled.div`
-  ${Wrapper};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const ActionsList = styled.ul`

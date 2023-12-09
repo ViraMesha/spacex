@@ -2,7 +2,8 @@ import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
 import IconButton from "../../atoms/Buttons/IconButton/IconButton";
 import Logo from "../../atoms/Logo/Logo";
 import Navigation from "../../molecules/Navigation/Navigation";
-import { StyledHeader, Container, ActionsList } from "./Header.styled";
+import Container from "../../atoms/Container/Container";
+import { StyledHeader, ActionsList } from "./Header.styled";
 
 const Header = () => {
   return (
