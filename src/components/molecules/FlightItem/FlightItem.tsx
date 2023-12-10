@@ -10,17 +10,33 @@ import {
   Content,
   ButtonsWrapper,
 } from "./FlightItem.styled";
+import { useRecoilState } from "recoil";
+import { favoriteListState } from "../../../state/atoms";
 
 type FlightItemProps = TRocket & {
   isFavorite?: boolean;
+  addToFavorites?: ((data: TRocket) => void) | undefined;
 };
 
 const FlightItem = ({
+  id,
   name,
   description,
   img,
   isFavorite,
+  addToFavorites,
 }: FlightItemProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, setFavoriteList] = useRecoilState(favoriteListState);
+
+  const handleAddToFav = (data: TRocket) => {
+    addToFavorites && addToFavorites(data);
+  };
+
+  const handleDeleteFav = (id: string) => {
+    setFavoriteList((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
   return (
     <Item>
       <article>
@@ -31,9 +47,12 @@ const FlightItem = ({
           <ButtonsWrapper>
             <ActionButton>buy</ActionButton>
             {isFavorite ? (
-              <IconButton icon="delete" />
+              <IconButton icon="delete" onClick={() => handleDeleteFav(id)} />
             ) : (
-              <IconButton icon="heart" />
+              <IconButton
+                icon="heart"
+                onClick={() => handleAddToFav({ id, name, description, img })}
+              />
             )}
           </ButtonsWrapper>
         </Content>

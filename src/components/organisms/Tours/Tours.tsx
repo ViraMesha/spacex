@@ -1,24 +1,25 @@
-import Container from "../../atoms/Container/Container";
-import SliderPagination from "../../atoms/SliderPagination/SliderPagination";
-import { Heading, Title, Section, Grid } from "./Tours.styled";
-import SlickSlider from "react-slick";
 import { useRef } from "react";
-import Slider from "../../atoms/Slider/Slider";
-import FlightItem from "../../molecules/FlightItem/FlightItem";
 import { useQuery } from "@apollo/client";
+import SlickSlider from "react-slick";
+import { v4 as uuidv4 } from "uuid";
+
+import Slider from "../../atoms/Slider/Slider";
+import SliderPagination from "../../atoms/SliderPagination/SliderPagination";
+import Container from "../../atoms/Container/Container";
+import FlightItem from "../../molecules/FlightItem/FlightItem";
+
+import { Heading, Title, Section, Grid } from "./Tours.styled";
+
 import { ALL_ROCKETS } from "../../../apollo/rockets";
+import { getImage } from "../../../utils/getImage";
 import type { TRocket } from "../../../types";
-
-import slide1 from "../../../assets/slide-1.jpg";
-import slide2 from "../../../assets/slide-2.jpg";
-import slide3 from "../../../assets/slide-3.jpg";
-
-// const images = [slide1, slide2, slide3, slide1];
+import { useSetRecoilState } from "recoil";
+import { favoriteListState } from "../../../state/atoms";
 
 const Tours = () => {
   const sliderRef = useRef<SlickSlider | null>(null);
   const { loading, error, data } = useQuery(ALL_ROCKETS);
-  // const [rockets, setRockets] = useState<TRocket[] | []>([]);
+  const setFavoriteList = useSetRecoilState(favoriteListState);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
@@ -35,12 +36,8 @@ const Tours = () => {
     }
   };
 
-  const getDesignImage = (index: number) => {
-    const designImages = [slide1, slide2, slide3];
-
-    if (index < 3) return designImages[index];
-
-    return designImages[0];
+  const addToFavorites = (data: TRocket) => {
+    setFavoriteList((prevItems) => [...prevItems, data]);
   };
 
   return (
@@ -65,8 +62,10 @@ const Tours = () => {
               data.rockets.map((item: TRocket, index: number) => (
                 <FlightItem
                   key={item.id}
-                  img={getDesignImage(index)}
+                  img={getImage(index)}
                   {...item}
+                  id={uuidv4()}
+                  addToFavorites={addToFavorites}
                 />
               ))}
           </Slider>
