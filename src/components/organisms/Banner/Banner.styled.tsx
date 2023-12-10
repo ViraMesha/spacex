@@ -1,5 +1,22 @@
-import styled from "styled-components";
-import arrow from "../../../assets/icons/arrow-down.svg";
+import styled, { keyframes } from "styled-components";
+
+const jumpInfinite = keyframes`
+  0%
+    {
+        transform: translateY(-50%);
+        opacity: 0.5;
+    }
+    50%
+    {
+        transform: translateY(20%);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+`;
 
 export const Section = styled.section`
   min-height: 740px;
@@ -32,6 +49,17 @@ export const Heading = styled.h1`
   }
 `;
 
+export const LinkWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: center;
+
+  & svg {
+    animation: ${jumpInfinite} 2s infinite;
+  }
+`;
+
 export const Link = styled.a`
   -webkit-text-stroke: 0.4px var(--text-black);
   -webkit-text-fill-color: var(--text-white);
@@ -41,20 +69,8 @@ export const Link = styled.a`
   font-weight: 300;
   line-height: normal;
   display: inline-block;
-  padding-right: 20px;
   margin-top: 50px;
   position: relative;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 7px;
-    right: -23px;
-    width: 23px;
-    height: 27px;
-    background: url(${arrow}) no-repeat;
-  }
 `;
 
 export const SliderWrapper = styled.div`

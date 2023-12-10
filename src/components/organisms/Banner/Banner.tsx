@@ -6,13 +6,11 @@ import {
   SliderWrapper,
   Image,
   Link,
+  LinkWrapper,
 } from "./Banner.styled";
-import img1 from "../../../assets/banner-1.jpg";
-import img2 from "../../../assets/banner-2.jpg";
-import img3 from "../../../assets/banner-3.jpg";
+import icons from "../../../assets/sprite.svg";
 import Slider from "../../atoms/Slider/Slider";
-
-const bannerImages = [img1, img2, img3];
+import { bannerImages } from "../../../utils/data";
 
 const Banner = () => {
   return (
@@ -22,7 +20,12 @@ const Banner = () => {
           <Heading>
             The space is waiting for <span>you</span>
           </Heading>
-          <Link href="#tours">Explore tours</Link>
+          <LinkWrapper>
+            <Link href="#tours">Explore tours</Link>
+            <svg width={24} height={24}>
+              <use href={icons + `#arrow-down`} />
+            </svg>
+          </LinkWrapper>
         </Content>
         <SliderWrapper>
           <Slider dots autoplay infinite>
