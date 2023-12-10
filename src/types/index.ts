@@ -1,8 +1,8 @@
-type TFlight = {
+type TRocket = {
   id: string;
   name: string;
   description: string;
-  img: string;
+  img?: string;
 };
 
-export type { TFlight };
+export type { TRocket };

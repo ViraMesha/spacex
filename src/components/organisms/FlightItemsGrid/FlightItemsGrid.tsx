@@ -6,7 +6,7 @@ const FlightItemsGrid = () => {
   return (
     <Grid>
       {flights.slice(0, 3).map((item) => (
-        <FlightItem key={item.id} {...item} />
+        <FlightItem key={item.id} {...item} isFavorite />
       ))}
     </Grid>
   );

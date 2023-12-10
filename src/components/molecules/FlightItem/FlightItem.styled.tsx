@@ -15,18 +15,21 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
+  height: 276px;
   padding: 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Title = styled.h3`
   color: var(--text-light-black);
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 16px;
 `;
 
 export const Text = styled.p`
-  --max-lines: 2;
+  --max-lines: 4;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -40,7 +43,6 @@ export const Text = styled.p`
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 1rem;
-  margin-top: 64px;
 
   & button:first-child {
     width: 278px;

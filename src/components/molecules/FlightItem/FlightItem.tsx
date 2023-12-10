@@ -1,4 +1,4 @@
-import { TFlight } from "../../../types";
+import { TRocket } from "../../../types";
 import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
 import IconButton from "../../atoms/Buttons/IconButton/IconButton";
 
@@ -11,7 +11,16 @@ import {
   ButtonsWrapper,
 } from "./FlightItem.styled";
 
-const FlightItem = ({ name, description, img }: TFlight) => {
+type FlightItemProps = TRocket & {
+  isFavorite?: boolean;
+};
+
+const FlightItem = ({
+  name,
+  description,
+  img,
+  isFavorite,
+}: FlightItemProps) => {
   return (
     <Item>
       <article>
@@ -21,7 +30,11 @@ const FlightItem = ({ name, description, img }: TFlight) => {
           <Text>{description}</Text>
           <ButtonsWrapper>
             <ActionButton>buy</ActionButton>
-            <IconButton icon="heart" />
+            {isFavorite ? (
+              <IconButton icon="delete" />
+            ) : (
+              <IconButton icon="heart" />
+            )}
           </ButtonsWrapper>
         </Content>
       </article>

@@ -6,4 +6,10 @@ export const Button = styled.button`
   font-family: Lato;
   font-size: 24px;
   line-height: normal;
+  cursor: pointer;
+  transition: transform var(--transition);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
