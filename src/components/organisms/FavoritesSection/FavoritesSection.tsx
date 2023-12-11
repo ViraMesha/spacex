@@ -1,9 +1,9 @@
 import { useRecoilState } from "recoil";
-import ClearAllBtn from "../../atoms/Buttons/ClearAllBtn/ClearAllBtn";
 import Container from "../../atoms/Container/Container";
 import FlightItemsGrid from "../FlightItemsGrid/FlightItemsGrid";
-import { ButtonWrapper, Section } from "./FavoritesSection.styled";
+import ClearAllBtn from "../../atoms/Buttons/ClearAllBtn/ClearAllBtn";
 import { favoriteListState } from "../../../state/atoms";
+import { ButtonWrapper, Section } from "./FavoritesSection.styled";
 
 const FavoritesSection = () => {
   const [favoriteList, setFavoriteList] = useRecoilState(favoriteListState);

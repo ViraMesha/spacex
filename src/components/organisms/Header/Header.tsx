@@ -1,8 +1,8 @@
-import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
-import IconButton from "../../atoms/Buttons/IconButton/IconButton";
+import Container from "../../atoms/Container/Container";
 import Logo from "../../atoms/Logo/Logo";
 import Navigation from "../../molecules/Navigation/Navigation";
-import Container from "../../atoms/Container/Container";
+import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
+import IconButton from "../../atoms/Buttons/IconButton/IconButton";
 import { StyledHeader, ActionsList } from "./Header.styled";
 
 const Header = () => {

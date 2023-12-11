@@ -1,3 +1,6 @@
+import Slider from "../../atoms/Slider/Slider";
+import { bannerImages } from "../../../utils/data";
+import icons from "../../../assets/sprite.svg";
 import {
   Section,
   Body,
@@ -8,9 +11,6 @@ import {
   Link,
   LinkWrapper,
 } from "./Banner.styled";
-import icons from "../../../assets/sprite.svg";
-import Slider from "../../atoms/Slider/Slider";
-import { bannerImages } from "../../../utils/data";
 
 const Banner = () => {
   return (
