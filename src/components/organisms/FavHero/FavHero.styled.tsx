@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  max-width: 1440px;
+  max-width: 1660px;
   margin: 0 auto;
   position: relative;
   padding-top: 220px;
@@ -12,7 +12,7 @@ export const Section = styled.section`
 export const Container = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1660px;
 `;
 
 export const Image = styled.img`
