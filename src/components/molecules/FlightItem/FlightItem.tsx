@@ -12,6 +12,7 @@ import {
 } from "./FlightItem.styled";
 import { useRecoilState } from "recoil";
 import { favoriteListState } from "../../../state/atoms";
+import { showToast } from "../../../utils/showToast";
 
 type FlightItemProps = TRocket & {
   isFavorite?: boolean;
@@ -35,6 +36,7 @@ const FlightItem = ({
 
   const handleDeleteFav = (id: string) => {
     setFavoriteList((prevItems) => prevItems.filter((item) => item.id !== id));
+    showToast("Successfully deleted!");
   };
 
   return (

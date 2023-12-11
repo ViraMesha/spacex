@@ -16,3 +16,9 @@ export const Grid = styled.div`
     stroke: var(--bg-white);
   }
 `;
+
+export const Text = styled.p`
+  color: var(--text-black);
+  text-align: center;
+  font-size: 24px;
+`;

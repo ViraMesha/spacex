@@ -5,6 +5,7 @@ interface IconButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLink?: boolean;
   href?: string;
   icon: string;
+  isInFavorites?: boolean;
 }
 
 const IconButton = ({ isLink, href = "#", icon, ...rest }: IconButton) => {

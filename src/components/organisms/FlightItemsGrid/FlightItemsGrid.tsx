@@ -1,20 +1,24 @@
 import { useRecoilValue } from "recoil";
-// import { flights } from "../../../utils/data";
-import FlightItem from "../../molecules/FlightItem/FlightItem";
-import { Grid } from "./FlightItemsGrid.styled";
-import { favoriteListState } from "../../../state/atoms";
 import type { TRocket } from "../../../types";
+import FlightItem from "../../molecules/FlightItem/FlightItem";
+import { Grid, Text } from "./FlightItemsGrid.styled";
+import { favoriteListState } from "../../../state/atoms";
 
 const FlightItemsGrid = () => {
   const flights = useRecoilValue(favoriteListState);
 
   return (
-    <Grid>
-      {flights.length > 0 &&
-        flights.map((item: TRocket) => (
-          <FlightItem key={item.id} {...item} isFavorite />
-        ))}
-    </Grid>
+    <>
+      {flights.length > 0 ? (
+        <Grid>
+          {flights.map((item: TRocket) => (
+            <FlightItem key={item.id} {...item} isFavorite />
+          ))}
+        </Grid>
+      ) : (
+        <Text>No favorite tours found!</Text>
+      )}
+    </>
   );
 };
 

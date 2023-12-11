@@ -15,6 +15,7 @@ import { getImage } from "../../../utils/getImage";
 import type { TRocket } from "../../../types";
 import { useSetRecoilState } from "recoil";
 import { favoriteListState } from "../../../state/atoms";
+import { showToast } from "../../../utils/showToast";
 
 const Tours = () => {
   const sliderRef = useRef<SlickSlider | null>(null);
@@ -38,6 +39,7 @@ const Tours = () => {
 
   const addToFavorites = (data: TRocket) => {
     setFavoriteList((prevItems) => [...prevItems, data]);
+    showToast("Successfully added!");
   };
 
   return (

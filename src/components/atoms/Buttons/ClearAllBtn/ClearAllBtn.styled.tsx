@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button<{ $shouldbeshown: boolean }>`
   all: unset;
   color: var(--text-dark-blue);
   font-family: Lato;
@@ -12,4 +12,6 @@ export const Button = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+  display: ${({ $shouldbeshown }) =>
+    $shouldbeshown ? "inline-block" : "none"};
 `;

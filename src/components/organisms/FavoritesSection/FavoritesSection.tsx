@@ -6,8 +6,7 @@ import { ButtonWrapper, Section } from "./FavoritesSection.styled";
 import { favoriteListState } from "../../../state/atoms";
 
 const FavoritesSection = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, setFavoriteList] = useRecoilState(favoriteListState);
+  const [favoriteList, setFavoriteList] = useRecoilState(favoriteListState);
 
   const handleDeleteFav = () => {
     setFavoriteList([]);
@@ -17,7 +16,11 @@ const FavoritesSection = () => {
     <Section>
       <Container>
         <ButtonWrapper>
-          <ClearAllBtn text="Clear all" onClick={handleDeleteFav} />
+          <ClearAllBtn
+            text="Clear all"
+            onClick={handleDeleteFav}
+            shouldBeShown={!!favoriteList.length}
+          />
         </ButtonWrapper>
         <FlightItemsGrid />
       </Container>
