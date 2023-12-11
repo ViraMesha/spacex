@@ -32,5 +32,5 @@ This project is a React application that consists of two pages: Home and Favorit
 - Install dependencies: npm install
 
 ## Usage
-Start the development server: npm start
-Open the app in your browser:  http://localhost:5173/
+- Start the development server: npm start
+- Open the app in your browser:  http://localhost:5173/
