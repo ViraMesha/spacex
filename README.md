@@ -27,9 +27,9 @@ This project is a React application that consists of two pages: Home and Favorit
 - Styled Components for styling
 
 ## Getting Started
-Clone the repository: git clone [https://github.com/your-username/space-x-tours-app.git](https://github.com/ViraMesha/spacex.git)
-Navigate to the project directory: cd space-x-tours-app
-Install dependencies: npm install
+- Clone the repository: git clone [https://github.com/your-username/space-x-tours-app.git](https://github.com/ViraMesha/spacex.git)
+- Navigate to the project directory: cd space-x-tours-app
+- Install dependencies: npm install
 
 ## Usage
 Start the development server: npm start
