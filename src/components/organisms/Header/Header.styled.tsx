@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
+  max-width: 1440px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   min-height: 5rem;
   padding: 0.87rem;

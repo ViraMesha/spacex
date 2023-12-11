@@ -19,16 +19,17 @@ const jumpInfinite = keyframes`
 `;
 
 export const Section = styled.section`
+  max-width: 1440px;
   min-height: 740px;
   position: relative;
   padding-top: 239px;
   background-color: var(--bg-black);
+  margin: 0 auto;
 `;
 
 export const Body = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
 `;
 
 export const Content = styled.div`
@@ -76,7 +77,6 @@ export const Link = styled.a`
 export const SliderWrapper = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 
@@ -89,6 +89,7 @@ export const SliderWrapper = styled.div`
 `;
 
 export const Image = styled.img`
+  max-width: 1440px;
   height: 740px;
   width: 100%;
   object-fit: cover;

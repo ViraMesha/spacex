@@ -7,5 +7,5 @@ export const getImage = (index: number) => {
 
   if (index < 3) return images[index];
 
-  return images[0];
+  return images[1];
 };
