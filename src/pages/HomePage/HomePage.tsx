@@ -1,4 +1,4 @@
-import HomeLayout from "../../templates/HomeLayout/HomeLayout";
+import HomeLayout from "../../components/templates/HomeLayout/HomeLayout";
 
 const HomePage = () => {
   return (

@@ -23,12 +23,4 @@ export const Grid = styled.div`
   & .slick-dots {
     bottom: -60px;
   }
-
-  & .slick-dots > li {
-    border-color: var(--text-light-black);
-  }
-
-  & .slick-dots li.slick-active button:before {
-    color: var(--text-light-black);
-  }
 `;

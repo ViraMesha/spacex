@@ -1,9 +1,8 @@
-// Import necessary modules and components
 import { forwardRef } from "react";
+
 import SlickSlider, { Settings } from "react-slick";
 import { StyledSlider } from "./Slider.styled";
 
-// Define prop type for ReusableSlider component
 type SliderProps = {
   slidesToShow?: number;
   children?: React.ReactNode;
@@ -24,10 +23,8 @@ type SliderProps = {
   dotsColor?: "white" | "black";
 };
 
-// Define type for forwarded reference
 type ForwardedRefType = SlickSlider | null;
 
-// Create the ReusableSlider component
 const Slider = forwardRef<ForwardedRefType, SliderProps>(
   (
     {
@@ -51,7 +48,6 @@ const Slider = forwardRef<ForwardedRefType, SliderProps>(
     },
     ref
   ) => {
-    // Configure the settings for the Slider component
     const sliderSettings: Settings = {
       slidesToShow,
       slidesToScroll,

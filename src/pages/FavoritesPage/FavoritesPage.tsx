@@ -1,4 +1,4 @@
-import FavoritesLayout from "../../templates/FavoritesLayout/FavoritesLayout";
+import FavoritesLayout from "../../components/templates/FavoritesLayout/FavoritesLayout";
 
 const FavoritesPage = () => {
   return (

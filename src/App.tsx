@@ -1,15 +1,13 @@
-import { Suspense, lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import { RecoilRoot } from "recoil";
 import { Slide, ToastContainer } from "react-toastify";
 
+import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 
-const Home = lazy(() => import("./components/pages/HomePage/HomePage"));
-const Favorites = lazy(
-  () => import("./components/pages/FavoritesPage/FavoritesPage")
-);
+const Home = lazy(() => import("./pages/HomePage/HomePage"));
+const Favorites = lazy(() => import("./pages/FavoritesPage/FavoritesPage"));
 
 function App() {
   return (

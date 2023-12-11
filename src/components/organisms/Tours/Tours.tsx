@@ -59,6 +59,7 @@ const Tours = () => {
             dots
             ref={sliderRef}
             infinite
+            dotsColor="black"
           >
             {data?.rockets?.length > 0 &&
               data.rockets.map((item: TRocket, index: number) => (

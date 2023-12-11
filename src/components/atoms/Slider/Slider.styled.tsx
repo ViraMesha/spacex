@@ -19,6 +19,10 @@ export const StyledSlider = styled(SlickSlider)`
     border: 2px solid var(--bg-white);
   }
 
+  & .slick-dots.black > li {
+    border-color: var(--text-light-black);
+  }
+
   .slick-dots li button:before {
     font-size: 12px;
     line-height: 12px;
@@ -31,5 +35,9 @@ export const StyledSlider = styled(SlickSlider)`
   .slick-dots li.slick-active button:before {
     color: white;
     opacity: 1;
+  }
+
+  .slick-dots.black li.slick-active button:before {
+    color: var(--text-light-black);
   }
 `;
