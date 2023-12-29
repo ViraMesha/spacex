@@ -1,4 +1,4 @@
-import{u as t,w as r,x as a}from"./index-mvivFQzt.js";import{s as e,f as s,F as l,C as c,H as x}from"./FlightItem-CRTxN7Hw.js";const d="/spacex/assets/fav-banner-4G4LpbQl.jpg",h=e.section`
+import{u as t,w as r,x as a}from"./index-kNb1OM-B.js";import{s as e,f as s,F as l,C as c,H as x}from"./FlightItem-FwLLhMps.js";const d="/spacex/assets/fav-banner-4G4LpbQl.jpg",h=e.section`
   max-width: 1660px;
   margin: 0 auto;
   position: relative;
