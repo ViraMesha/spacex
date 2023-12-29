@@ -1,6 +1,6 @@
 import Slider from "../../atoms/Slider/Slider";
 import { bannerImages } from "../../../utils/data";
-import icons from "../../../assets/sprite.svg";
+import { ArrowDown } from "../../atoms/Icons";
 import {
   Section,
   Body,
@@ -22,9 +22,7 @@ const Banner = () => {
           </Heading>
           <LinkWrapper>
             <Link href="#tours">Explore tours</Link>
-            <svg width={24} height={24}>
-              <use href={icons + `#arrow-down`} />
-            </svg>
+            <ArrowDown />
           </LinkWrapper>
         </Content>
         <SliderWrapper>
