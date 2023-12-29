@@ -1,5 +1,6 @@
 import IconButton from "../Buttons/IconButton/IconButton";
 import { List } from "./SliderPagination.styled";
+import { ArrowRight } from "../Icons";
 
 type SliderPaginationProps = {
   handlePrevClick: () => void;
@@ -12,8 +13,8 @@ const SliderPagination = ({
 }: SliderPaginationProps) => {
   return (
     <List>
-      <IconButton icon="arrow-right" onClick={handlePrevClick} />
-      <IconButton icon="arrow-right" onClick={handleNextClick} />
+      <IconButton icon={<ArrowRight />} onClick={handlePrevClick} />
+      <IconButton icon={<ArrowRight />} onClick={handleNextClick} />
     </List>
   );
 };

@@ -19,7 +19,7 @@ export const ButtonStyles = css`
     background-color: var(--bg-pink);
   }
 
-  &:hover > svg {
+  &:hover path {
     fill: white;
   }
 `;
@@ -35,7 +35,7 @@ export const Link = styled(NavLink)`
     background-color: var(--bg-pink);
   }
 
-  &.active > svg {
+  &.active path {
     fill: white;
   }
 `;

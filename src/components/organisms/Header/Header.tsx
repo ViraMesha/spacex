@@ -4,6 +4,7 @@ import Navigation from "../../molecules/Navigation/Navigation";
 import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
 import IconButton from "../../atoms/Buttons/IconButton/IconButton";
 import { StyledHeader, ActionsList } from "./Header.styled";
+import { HeartIcon } from "../../atoms/Icons";
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
         <Navigation />
         <ActionsList>
           <li>
-            <IconButton isLink icon="heart" href="/favorites" />
+            <IconButton isLink icon={<HeartIcon />} href="/favorites" />
           </li>
           <li>
             <ActionButton isLink>sign in</ActionButton>

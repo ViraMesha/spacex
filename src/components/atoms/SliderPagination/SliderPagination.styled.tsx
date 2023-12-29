@@ -9,13 +9,13 @@ export const List = styled.div`
     transform: rotate(180deg);
   }
 
-  & svg {
+  & path {
     fill: none;
     stroke: var(--stroke-black);
     transition: stroke var(--transition);
   }
 
-  & button:hover svg {
+  & button:hover path {
     fill: none;
     stroke: var(--bg-white);
   }

@@ -1,6 +1,7 @@
 import { TRocket } from "../../../types";
 import ActionButton from "../../atoms/Buttons/ActionButton/ActionButton";
 import IconButton from "../../atoms/Buttons/IconButton/IconButton";
+import { DeleteIcon, HeartIcon } from "../../atoms/Icons";
 
 import {
   Item,
@@ -49,10 +50,13 @@ const FlightItem = ({
           <ButtonsWrapper>
             <ActionButton>buy</ActionButton>
             {isFavorite ? (
-              <IconButton icon="delete" onClick={() => handleDeleteFav(id)} />
+              <IconButton
+                icon={<DeleteIcon />}
+                onClick={() => handleDeleteFav(id)}
+              />
             ) : (
               <IconButton
-                icon="heart"
+                icon={<HeartIcon />}
                 onClick={() => handleAddToFav({ id, name, description, img })}
               />
             )}
